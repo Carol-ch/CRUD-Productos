@@ -16,7 +16,7 @@ class ProductController extends Controller
 
     public function create()
     {
-        //Retornar-lavista-'products-create'-para-crear-un-nuevo-producto
+        //Retornar la vista 'products-create'para-crear-un-nuevo-producto
         return view('products.create');
     }
 
@@ -35,7 +35,7 @@ class ProductController extends Controller
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
-
+// Visualizar la lista de Productos
     public function show(Product $product)
     {
         return view('products.show', compact('product'));
